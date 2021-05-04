@@ -5,35 +5,35 @@ resource "azurerm_key_vault_access_policy" "keyvault-access-policy-objectids" {
   key_vault_id = azurerm_key_vault.keyvault.id
 
   key_permissions = [
-    "get",
-    "list",
-    "delete",
-    "create",
-    "update",
-    "import",
-    "backup",
-    "recover"
+    "Get",
+    "List",
+    "Delete",
+    "Create",
+    "Update",
+    "Import",
+    "Backup",
+    "Recover"
   ]
 
   secret_permissions = [
-    "get",
-    "list",
-    "delete",
-    "set",
-    "backup",
-    "recover",
-    "restore"
+    "Get",
+    "List",
+    "Delete",
+    "Set",
+    "Backup",
+    "Recover",
+    "Restore"
   ]
 
   certificate_permissions = [
-    "get",
-    "list",
-    "update",
-    "create",
-    "import",
-    "delete",
-    "backup",
-    "recover"
+    "Get",
+    "List",
+    "Update",
+    "Create",
+    "Import",
+    "Delete",
+    "Backup",
+    "Recover"
   ]
 }
 
@@ -45,27 +45,27 @@ resource "azurerm_key_vault_access_policy" "keyvault-access-policy-objectid-apps
   key_vault_id   = azurerm_key_vault.keyvault.id
 
   key_permissions = [
-    "get",
-    "list",
-    "delete",
-    "create",
-    "update",
-    "import"
+    "Get",
+    "List",
+    "Delete",
+    "Create",
+    "Update",
+    "Import"
   ]
 
   secret_permissions = [
-    "get",
-    "list",
-    "delete",
-    "set"
+    "Get",
+    "List",
+    "Delete",
+    "Set"
   ]
 
   certificate_permissions = [
-    "get",
-    "list",
-    "update",
-    "create",
-    "import",
-    "delete"
+    "Get",
+    "List",
+    "Update",
+    "Create",
+    "Import",
+    "Delete"
   ]
 }
