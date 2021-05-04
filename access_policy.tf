@@ -35,6 +35,8 @@ resource "azurerm_key_vault_access_policy" "keyvault-access-policy-objectids" {
     "Backup",
     "Recover"
   ]
+
+  storage_permissions = []
 }
 
 resource "azurerm_key_vault_access_policy" "keyvault-access-policy-objectid-apps" {
@@ -68,4 +70,6 @@ resource "azurerm_key_vault_access_policy" "keyvault-access-policy-objectid-apps
     "Import",
     "Delete"
   ]
+
+  storage_permissions = []
 }
