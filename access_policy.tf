@@ -42,9 +42,9 @@ resource "azurerm_key_vault_access_policy" "keyvault-access-policy-objectids-ful
 }
 
 resource "azurerm_key_vault_access_policy" "keyvault-access-policy-objectid-apps-fullaccess" {
-  count          = length(var.allowed_objectid_apps_fullaccess)
-  object_id      = element(split(":", element(var.allowed_objectid_apps_fullaccess, count.index)), 0)
-  application_id = element(split(":", element(var.allowed_objectid_apps_fullaccess, count.index)), 1)
+  count          = length(var.allowed_objectid_app_tuples_fullaccess)
+  object_id      = element(split(":", element(var.allowed_objectid_app_tuples_fullaccess, count.index)), 0)
+  application_id = element(split(":", element(var.allowed_objectid_app_tuples_fullaccess, count.index)), 1)
   tenant_id      = var.azure_tenant_id
   key_vault_id   = azurerm_key_vault.keyvault.id
 
@@ -101,9 +101,9 @@ resource "azurerm_key_vault_access_policy" "keyvault-access-policy-objectids-rea
 }
 
 resource "azurerm_key_vault_access_policy" "keyvault-access-policy-objectid-apps-readonly" {
-  count          = length(var.allowed_objectid_apps_readonly)
-  object_id      = element(split(":", element(var.allowed_objectid_apps_readonly, count.index)), 0)
-  application_id = element(split(":", element(var.allowed_objectid_apps_readonly, count.index)), 1)
+  count          = length(var.allowed_objectid_app_tuples_readonly)
+  object_id      = element(split(":", element(var.allowed_objectid_app_tuples_readonly, count.index)), 0)
+  application_id = element(split(":", element(var.allowed_objectid_app_tuples_readonly, count.index)), 1)
   tenant_id      = var.azure_tenant_id
   key_vault_id   = azurerm_key_vault.keyvault.id
 
@@ -150,9 +150,9 @@ resource "azurerm_key_vault_access_policy" "keyvault-access-policy-objectids-cre
 }
 
 resource "azurerm_key_vault_access_policy" "keyvault-access-policy-objectid-apps-createonly" {
-  count          = length(var.allowed_objectid_apps_createonly)
-  object_id      = element(split(":", element(var.allowed_objectid_apps_createonly, count.index)), 0)
-  application_id = element(split(":", element(var.allowed_objectid_apps_createonly, count.index)), 1)
+  count          = length(var.allowed_objectid_app_tuples_createonly)
+  object_id      = element(split(":", element(var.allowed_objectid_app_tuples_createonly, count.index)), 0)
+  application_id = element(split(":", element(var.allowed_objectid_app_tuples_createonly, count.index)), 1)
   tenant_id      = var.azure_tenant_id
   key_vault_id   = azurerm_key_vault.keyvault.id
 

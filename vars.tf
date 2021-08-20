@@ -35,7 +35,7 @@ variable "allowed_objectids_fullaccess" {
   default     = []
 }
 
-variable "allowed_objectid_apps_fullaccess" {
+variable "allowed_objectid_app_tuples_fullaccess" {
   type        = list(string)
   description = "A list of object IDs with allowed apps (in the form of <objectid>:<app>) that are allowed to fully access the keyvault"
   default     = []
@@ -47,7 +47,7 @@ variable "allowed_objectids_readonly" {
   default     = []
 }
 
-variable "allowed_objectid_apps_readonly" {
+variable "allowed_objectid_app_tuples_readonly" {
   type        = list(string)
   description = "A list of object IDs with allowed apps (in the form of <objectid>:<app>) that are allowed to read elements the keyvault"
   default     = []
@@ -59,7 +59,7 @@ variable "allowed_objectids_createonly" {
   default     = []
 }
 
-variable "allowed_objectid_apps_createonly" {
+variable "allowed_objectid_app_tuples_createonly" {
   type        = list(string)
   description = "A list of object IDs with allowed apps (in the form of <objectid>:<app>) that are allowed to create (but not read or change) elements the keyvault"
   default     = []

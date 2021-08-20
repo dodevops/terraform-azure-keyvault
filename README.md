@@ -83,7 +83,7 @@ Type: `string`
 
 The following input variables are optional (have default values):
 
-### allowed\_objectid\_apps\_createonly
+### allowed\_objectid\_app\_tuples\_createonly
 
 Description: A list of object IDs with allowed apps (in the form of <objectid>:<app>) that are allowed to create (but not read or change) elements the keyvault
 
@@ -91,7 +91,7 @@ Type: `list(string)`
 
 Default: `[]`
 
-### allowed\_objectid\_apps\_fullaccess
+### allowed\_objectid\_app\_tuples\_fullaccess
 
 Description: A list of object IDs with allowed apps (in the form of <objectid>:<app>) that are allowed to fully access the keyvault
 
@@ -99,7 +99,7 @@ Type: `list(string)`
 
 Default: `[]`
 
-### allowed\_objectid\_apps\_readonly
+### allowed\_objectid\_app\_tuples\_readonly
 
 Description: A list of object IDs with allowed apps (in the form of <objectid>:<app>) that are allowed to read elements the keyvault
 
