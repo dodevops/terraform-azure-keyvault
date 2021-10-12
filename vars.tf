@@ -18,6 +18,12 @@ variable "resource_group" {
   description = "Azure Resource Group to use"
 }
 
+variable "tags" {
+  type        = map(any)
+  description = "Map of tags for the resources"
+  default     = {}
+}
+
 variable "sku" {
   type        = string
   description = "Keyvault sku"
