@@ -6,6 +6,7 @@ resource "azurerm_key_vault" "keyvault" {
   sku_name                 = var.sku
   purge_protection_enabled = false
   soft_delete_enabled      = var.soft_delete_enabled
+  tags                     = var.tags
 }
 
 resource "azurerm_storage_account" "storageaccountkeyvaultaudit" {
@@ -15,6 +16,7 @@ resource "azurerm_storage_account" "storageaccountkeyvaultaudit" {
   location                 = var.location
   account_tier             = "Standard"
   account_replication_type = "LRS"
+  tags                     = var.tags
 }
 
 resource "azurerm_monitor_diagnostic_setting" "keyvaultaudit" {

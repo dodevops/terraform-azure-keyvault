@@ -163,6 +163,14 @@ Type: `bool`
 
 Default: `false`
 
+### tags
+
+Description: Map of tags for the resources
+
+Type: `map(any)`
+
+Default: `{}`
+
 ## Outputs
 
 The following outputs are exported:
