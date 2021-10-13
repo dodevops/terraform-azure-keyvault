@@ -5,7 +5,6 @@ resource "azurerm_key_vault" "keyvault" {
   tenant_id                = var.azure_tenant_id
   sku_name                 = var.sku
   purge_protection_enabled = false
-  soft_delete_enabled      = var.soft_delete_enabled
   tags                     = var.tags
 }
 
@@ -23,7 +22,7 @@ resource "azurerm_monitor_diagnostic_setting" "keyvaultaudit" {
   count              = var.enable_audit ? 1 : 0
   name               = "${lower(var.project)}${lower(var.stage)}keyvaultaudit"
   target_resource_id = azurerm_key_vault.keyvault.id
-  storage_account_id = azurerm_storage_account.storageaccountkeyvaultaudit.id
+  storage_account_id = azurerm_storage_account.storageaccountkeyvaultaudit[0].id
 
   log {
     category = "AuditEvent"

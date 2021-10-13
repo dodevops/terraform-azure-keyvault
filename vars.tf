@@ -71,12 +71,6 @@ variable "allowed_objectid_app_tuples_createonly" {
   default     = []
 }
 
-variable "soft_delete_enabled" {
-  type        = bool
-  description = "Toggles if soft delete is enabled"
-  default     = false
-}
-
 variable "enable_audit" {
   type        = bool
   description = "Enable audit of keyvault changes"
