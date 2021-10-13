@@ -155,14 +155,6 @@ Type: `string`
 
 Default: `"standard"`
 
-### soft\_delete\_enabled
-
-Description: Toggles if soft delete is enabled
-
-Type: `bool`
-
-Default: `false`
-
 ### tags
 
 Description: Map of tags for the resources
