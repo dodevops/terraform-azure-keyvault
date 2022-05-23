@@ -61,6 +61,18 @@ Description: The azure location used for azure
 
 Type: `string`
 
+### network\_acls\_ip\_rules
+
+Description: List of one or more IP Addresses, or CIDR Blocks which should be able to access the Key Vault. If default action is Allow this can be an empty list
+
+Type: `list(string)`
+
+### network\_acls\_virtual\_network\_subnet\_ids
+
+Description: List of one or more Subnet IDs which should be able to access this Key Vault. If default action is Allow this can be an empty list
+
+Type: `list(string)`
+
 ### project
 
 Description: Three letter project key
@@ -147,6 +159,22 @@ Type: `bool`
 
 Default: `false`
 
+### network\_acls\_bypass
+
+Description: Specifies which traffic can bypass the network rules. Possible values are AzureServices and None.
+
+Type: `string`
+
+Default: `"None"`
+
+### network\_acls\_default\_action
+
+Description: The Default Action to use when no rules match from ip\_rules / virtual\_network\_subnet\_ids. Possible values are Allow and Deny.
+
+Type: `string`
+
+Default: `"Deny"`
+
 ### sku
 
 Description: Keyvault sku
@@ -154,6 +182,14 @@ Description: Keyvault sku
 Type: `string`
 
 Default: `"standard"`
+
+### soft\_delete\_retention\_days
+
+Description:  The number of days that items should be retained for once soft-deleted. This value can be between 7 and 90 days
+
+Type: `number`
+
+Default: `14`
 
 ### tags
 
