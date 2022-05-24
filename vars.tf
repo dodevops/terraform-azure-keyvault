@@ -82,3 +82,31 @@ variable "audit_retention_period" {
   description = "Sets number of days to keep audit records, if audit is enabled"
   default     = 365
 }
+
+variable "soft_delete_retention_days" {
+  type        = number
+  description = "The number of days that items should be retained for once soft-deleted. This value can be between 7 and 90 days"
+  default     = 14
+}
+
+variable "network_acls_bypass" {
+  type        = string
+  description = "Specifies which traffic can bypass the network rules. Possible values are AzureServices and None."
+  default     = "None"
+}
+
+variable "network_acls_default_action" {
+  type        = string
+  description = "The Default Action to use when no rules match from ip_rules / virtual_network_subnet_ids. Possible values are Allow and Deny."
+  default     = "Deny"
+}
+
+variable "network_acls_ip_rules" {
+  type        = list(string)
+  description = "List of one or more IP Addresses, or CIDR Blocks which should be able to access the Key Vault. If default action is Allow this can be an empty list"
+}
+
+variable "network_acls_virtual_network_subnet_ids" {
+  type        = list(string)
+  description = "List of one or more Subnet IDs which should be able to access this Key Vault. If default action is Allow this can be an empty list"
+}
