@@ -32,22 +32,7 @@ resource "azurerm_monitor_diagnostic_setting" "keyvaultaudit" {
   target_resource_id = azurerm_key_vault.keyvault.id
   storage_account_id = azurerm_storage_account.storageaccountkeyvaultaudit[0].id
 
-  log {
+  enabled_log {
     category = "AuditEvent"
-    enabled  = true
-
-    retention_policy {
-      enabled = true
-      days    = var.audit_retention_period
-    }
-  }
-
-  metric {
-    category = "AllMetrics"
-    enabled  = false
-
-    retention_policy {
-      enabled = false
-    }
   }
 }

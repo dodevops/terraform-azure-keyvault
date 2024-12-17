@@ -77,12 +77,6 @@ variable "enable_audit" {
   default     = false
 }
 
-variable "audit_retention_period" {
-  type        = number
-  description = "Sets number of days to keep audit records, if audit is enabled"
-  default     = 365
-}
-
 variable "soft_delete_retention_days" {
   type        = number
   description = "The number of days that items should be retained for once soft-deleted. This value can be between 7 and 90 days"
